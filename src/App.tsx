@@ -18,6 +18,7 @@ import { ProjectDiagram } from './components/ProjectDiagram';
 import { ProjectModal } from './components/ProjectModal';
 import { ContactModal } from './components/ContactModal';
 import { Reveal } from './components/Reveal';
+import { N8nChatbot } from './components/N8nChatbot';
 
 const PROJECT_FILTERS: ProjectCategory[] = [
   'All',
@@ -662,6 +663,8 @@ export default function App() {
         initialSubject={contactSubject}
         onClose={() => setContactOpen(false)}
       />
+
+      <N8nChatbot onOpenContact={() => handleOpenInquiry('')} />
     </div>
   );
 }

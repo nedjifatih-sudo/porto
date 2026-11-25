@@ -285,3 +285,17 @@ export const CONTACT_LINKS: ContactLinkItem[] = [
     isPlaceholder: true,
   },
 ];
+
+export const CHATBOT_CONFIG = {
+  title: 'Assistant',
+  subtitle: 'n8n Webhook',
+  // Set VITE_N8N_WEBHOOK_URL in .env / Vercel, or paste your n8n webhook URL directly below.
+  webhookUrl: (import.meta.env.VITE_N8N_WEBHOOK_URL as string | undefined)?.trim() || '',
+  welcomeMessage:
+    "Ask about Muhammad Yuhal Fata's network infrastructure work, FTTH & GenieACS experience, automation workflows, or collaboration inquiries.",
+  starterPrompts: [
+    'Tell me about your FTTH & GPON work',
+    'How do you use n8n and AI agents?',
+    'Are you open for projects?',
+  ],
+} as const;
